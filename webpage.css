@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2? family-Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 *,
 *::before,
@@ -6,13 +6,32 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-  
 }
+
 body {
-   font-family: "Roboto", system-ui;
-   background-color: ☐ hs1(240, 4%, 7%);
+   /* Combined your font rules */
+   font-family: "Roboto", system-ui, sans-serif;
+   
+   /* Fixed the color syntax (removed the box symbol and corrected hs1 to hsl) */
+   background-color: hsl(240, 4%, 15%); 
+   color: white; /* Added this so your text is visible on a dark background */
+   
+   /* Flexbox layout */
    display: flex;
+   flex-direction: column; /* This forces a vertical stack (One below the other) */
    justify-content: center;
    align-items: center;
-   font-family: system-ui;
+   min-height: 100vh; /* This centers everything vertically on the screen */
+}
+
+/* Added style for your button so it looks nice */
+.my-button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
