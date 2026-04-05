@@ -10,28 +10,49 @@
 
 body {
    /* Combined your font rules */
-   font-family: "Roboto", system-ui, sans-serif;
+   font-family: "Roboto", system-ui;
    
    /* Fixed the color syntax (removed the box symbol and corrected hs1 to hsl) */
-   background-color: hsl(240, 4%, 15%); 
-   color: white; /* Added this so your text is visible on a dark background */
+   background-color: hsl(240, 4%, 7%); 
+    /* Added this so your text is visible on a dark background */
    
    /* Flexbox layout */
    display: flex;
-   flex-direction: column; /* This forces a vertical stack (One below the other) */
+    /* This forces a vertical stack (One below the other) */
    justify-content: center;
    align-items: center;
-   min-height: 100vh; /* This centers everything vertically on the screen */
+   font-family: system-ui; /* This centers everything vertically on the screen */
+}
+
+:root {
+   --primary: 250 66% 61%;
 }
 
 /* Added style for your button so it looks nice */
 .my-button {
-    margin-top: 20px;
-    padding: 10px 25px;
-    background-color: #007BFF;
+    all: unset;
+    font-size: 24px;
+    margin-top: 100px;
+    padding: 14px 52px;
+    background: hsl(240, 4%, 7%);
     color: white;
-    border: none;
-    border-radius: 5px;
+    text-transform: uppercase;
+    position: relative;
+    border-radius: 100px;
     cursor: pointer;
     font-size: 16px;
+    transition: 0.25s ease;
+} 
+.my-button:hover > span {
+    color: hsl(var(--primary) / 1);
 }
+
+@property --angle {
+   syntax: "<angle>";
+   initial-value: 0deg;
+   inherits: false;
+}
+
+.my-button::before,
+.my-button::after {
+   b
