@@ -1,17 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
-    <link rel="stylesheet" href="webpage.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Border Button</title>
+  <style>
+    @property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+    @keyframes spin {
+      to { --angle: 360deg; }
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0a;
+    }
+
+    .btn-wrap {
+      position: relative;
+      display: inline-block;
+      border-radius: 8px;
+      padding: 3px;
+      background: conic-gradient(from var(--angle), #ff4ecd, #00d8ff, #00ff88, #ff4ecd);
+      animation: spin 3s linear infinite;
+    }
+
+    .glow-shadow {
+      position: absolute;
+      inset: -3px;
+      border-radius: 10px;
+      background: conic-gradient(from var(--angle), #ff4ecd, #00d8ff, #00ff88, #ff4ecd);
+      filter: blur(12px);
+      opacity: 0.5;
+      animation: spin 3s linear infinite;
+      z-index: -1;
+    }
+
+    .btn-inner {
+      background: #0a0a0a;
+      border-radius: 6px;
+      padding: 14px 40px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Segoe UI', sans-serif;
+      cursor: pointer;
+      border: none;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-inner:hover {
+      color: #00d8ff;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to My Webpage</h1>
-    <p>This is where my data will eventually go!</p>
-    
-    <hr style="width: 50%; margin: 20px 0;">
-
-    <div>
-        <button class="btn">Run Forecast</button>
+  <div style="position: relative;">
+    <div class="glow-shadow"></div>
+    <div class="btn-wrap">
+      <button class="btn-inner">Click Me</button>
     </div>
+  </div>
 </body>
 </html>
