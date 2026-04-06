@@ -1,73 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Animated Border Button</title>
-  <style>
-    @property --angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
-
-    @keyframes spin {
-      to { --angle: 360deg; }
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #0a0a0a;
-    }
-
-    .btn-wrap {
-      position: relative;
-      display: inline-block;
-      border-radius: 8px;
-      padding: 3px;
-      background: conic-gradient(from var(--angle), #ff4ecd, #00d8ff, #00ff88, #ff4ecd);
-      animation: spin 3s linear infinite;
-    }
-
-    .glow-shadow {
-      position: absolute;
-      inset: -3px;
-      border-radius: 10px;
-      background: conic-gradient(from var(--angle), #ff4ecd, #00d8ff, #00ff88, #ff4ecd);
-      filter: blur(12px);
-      opacity: 0.5;
-      animation: spin 3s linear infinite;
-      z-index: -1;
-    }
-
-    .btn-inner {
-      background: #0a0a0a;
-      border-radius: 6px;
-      padding: 14px 40px;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      font-family: 'Segoe UI', sans-serif;
-      cursor: pointer;
-      border: none;
-      letter-spacing: 0.05em;
-    }
-
-    .btn-inner:hover {
-      color: #00d8ff;
-    }
-  </style>
-</head>
-<body>
-  <div style="position: relative;">
-    <div class="glow-shadow"></div>
-    <div class="btn-wrap">
-      <button class="btn-inner">Click Me</button>
-    </div>
-  </div>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-"8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Portfolio </title>
+    <style>
+body {
+  background-color: rgb(0, 0, 33);
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+        <div class="right">
+        </div>
+      </nav>
+    </header>
+  </body>
